@@ -119,15 +119,14 @@ void Ingredient::convertTo(QString newUnits){
     amount.convertTo(newUnits);
 }
 
-
 // Comparators for Sort
 // sort by name order
 bool Ingredient::lessThan(Ingredient *a, Ingredient *b) {
-    return a->getName() < b->getName();
+    return a < b;
 }
 
 bool Ingredient::moreThan(Ingredient *a, Ingredient *b) {
-    return a->getName() > b->getName();
+    return a > b;
 }
 
 

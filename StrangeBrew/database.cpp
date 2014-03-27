@@ -324,10 +324,10 @@ bool Database::readDB(QString styleYear){
     qDebug() << "Style DB Size: " << styleDB.size();
 
     sort(styleDB.begin(), styleDB.end());
-    sort(fermDB.begin(), fermDB.end(),Fermentable::lessThan);
-    sort(hopsDB.begin(), hopsDB.end());
-    sort(yeastDB.begin(), yeastDB.end());
-    sort(waterDB.begin(), waterDB.end());
+   // sort(fermDB.begin(), fermDB.end(),Fermentable::lessThan);
+   //  sort(hopsDB.begin(), hopsDB.end());
+   // sort(yeastDB.begin(), yeastDB.end());
+   // sort(waterDB.begin(), waterDB.end());
 
     return true;
 
@@ -393,7 +393,7 @@ bool Database::readFermentables() {
 
     qDebug() << "Ferm Found " << fermDB.size();
 
-    // sort(fermDB.begin(), fermDB.end());
+    sort(fermDB.begin(), fermDB.end(), Fermentable::lessThan);
 
     return true;
 }

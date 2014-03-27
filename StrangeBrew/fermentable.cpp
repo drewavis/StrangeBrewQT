@@ -137,3 +137,7 @@ QString Fermentable::toString() {
             .arg(SBStringUtils::format(getPercent(), 1), 5);
     return temp;
 }
+
+bool Fermentable::lessThan(Fermentable *a, Fermentable *b) {
+    return a->getName() < b->getName();
+}

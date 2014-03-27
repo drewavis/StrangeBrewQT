@@ -47,6 +47,7 @@ public:
     virtual bool operator ==(Fermentable other) const;
     virtual bool operator ==(QString other) const;
     QString toString();
+    static bool Fermentable::lessThan(Fermentable *a, Fermentable *b);
 
 };
 
